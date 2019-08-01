@@ -3,8 +3,9 @@ import os
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.optimizers import RMSprop
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from keras_preprocessing import image
+from tensorflow.keras.preprocessing.image import (ImageDataGenerator,
+                                                  load_img,
+                                                  img_to_array)
 print(tf.__version__)
 tf.test.is_gpu_available() and tf.test.is_built_with_cuda()
 
@@ -57,9 +58,9 @@ history = model.fit_generator(train_generator,
 
 # %%
 downloaded_files = '../../../Downloads/'
-img = image.load_img(downloaded_files+'dog1.jpg', target_size=(150, 150))
+img = load_img(downloaded_files+'cat1.jpg', target_size=(150, 150))
 
-x = image.img_to_array(img)
+x = img_to_array(img)
 x = np.expand_dims(x, axis=0)
 images = np.vstack([x])
 
@@ -71,3 +72,7 @@ if classes[0] > 0:
     print('It is a dog!')
 else:
     print('It is a cat...')
+
+
+
+#%%
