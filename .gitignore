@@ -1,2 +1,7 @@
 .vscode/
-supportfiles/
+supportfiles/__pycache__/
+supportfiles/cats_and_dogs_filtered/
+supportfiles/cats_vs_dogs/
+supportfiles/happy-or-sad/
+supportfiles/horse-or-human/
+supportfiles/validation-horse-or-human/
