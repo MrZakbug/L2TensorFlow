@@ -31,8 +31,8 @@ model.compile(optimizer=RMSprop(lr=0.001),
               metrics=['acc'])
 
 # %%
-train_dir = os.getcwd() + '/support-files/cats_and_dogs_filtered/train'
-validation_dir = os.getcwd() + '/support-files/cats_and_dogs_filtered/validation'
+train_dir = os.getcwd() + '/supportfiles/cats_and_dogs_filtered/train'
+validation_dir = os.getcwd() + '/supportfiles/cats_and_dogs_filtered/validation'
 
 train_datagen = ImageDataGenerator(rescale=1.0/255.)
 test_datagen = ImageDataGenerator(rescale=1.0/255.)
