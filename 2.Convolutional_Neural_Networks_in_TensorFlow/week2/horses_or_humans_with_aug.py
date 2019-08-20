@@ -57,8 +57,7 @@ test_datagen = ImageDataGenerator(
     shear_range=0.2,
     zoom_range=0.2,
     horizontal_flip=True,
-    fill_mode='nearest'
-      
+    fill_mode='nearest'    
 )
 
 #%%
